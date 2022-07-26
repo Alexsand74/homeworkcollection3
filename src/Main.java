@@ -1,19 +1,20 @@
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Main {
+
+    private static final List<Integer> nums = new ArrayList <> (List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
     public static void main(String[] args) {
 //        ## Задание 1
 //        Напишите код, с помощью которого можно напечатать только нечетные числа в консоль.
 //        Код должен работать с любой последовательностью и объемом списка чисел.
 //        В качестве отладочной информации можете использовать список чисел
         System.out.println("Есть массив List ");
-        List<Integer> nums = new ArrayList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
-
         System.out.println(nums);
         System.out.println("Задание № 1");
-        DoingWorkInterface calculator = new DoingWork();
-        calculator.conclusionOddNumbers(nums);
+          DoingWork calculator = new DoingWork();
+          calculator.conclusionOddNumbers(nums);
         System.out.println();
 //          ## Задание 2
 //        Напишите код, с помощью которого можно напечатать только четные числа без повторений в порядке возрастания.
@@ -42,4 +43,5 @@ public class Main {
         calculator.numberOfRepetitions(text);
         System.out.println();
     }
+
 }

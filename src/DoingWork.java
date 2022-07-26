@@ -1,8 +1,6 @@
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+
 
 public class DoingWork implements DoingWorkInterface {
 
@@ -14,7 +12,8 @@ public class DoingWork implements DoingWorkInterface {
     }
 
     public void conclusionHonestNumbers(List<Integer> nums) {
-        for (int i = 0; i < nums.size(); i++) {
+        Collections.sort(nums);
+         for (int i = 0; i < nums.size(); i++) {
             if ((nums.get(i)) % 2 != 0)
                 System.out.print(nums.get(i) + " ");
         }
@@ -23,7 +22,7 @@ public class DoingWork implements DoingWorkInterface {
     public void searchForDuplicatesWords(String text) {
         String[] words = text.split(" ");
         List<String> wordsList = new ArrayList<>();
-        Set <Integer> indexSet = new HashSet<>();
+        Set<Integer> indexSet = new HashSet<>();
         for (String s : words) {
             wordsList.add(s);
         }
